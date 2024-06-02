@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ImageCard } from "./ImageCard";
 
 export const MerchantCard = ({
