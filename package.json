@@ -21,6 +21,7 @@
 		"@effect/platform": "^0.55.4",
 		"@effect/platform-node": "^0.51.4",
 		"@opentelemetry/exporter-trace-otlp-http": "^0.51.1",
+		"@opentelemetry/sdk-trace-node": "^1.24.1",
 		"@radix-ui/react-avatar": "^1.0.4",
 		"@radix-ui/react-scroll-area": "^1.0.5",
 		"@radix-ui/react-separator": "^1.0.3",

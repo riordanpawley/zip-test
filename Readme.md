@@ -1,6 +1,7 @@
 # Web Assignment
 
 ## Notes
+* Live here: [zip-test-git-master-riordanpawleys-projects.vercel.app](zip-test-git-master-riordanpawleys-projects.vercel.app)
 * I decided to use this opportunity to explore some technologies and tools that I have wanted to try for a while such such as bun, rsc and graphql.
 * I spent a lot of time just trying to get some type safety into the graphql code. I'm not sure it is all hooked up correctly, but it seems to work for the most part.
 * I've split the app into two parts, one part uses suspense and the other does not. I wanted to see how they compare - open the network graph and refresh the page to see the difference.
