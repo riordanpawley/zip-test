@@ -8,7 +8,7 @@ import {
 	InMemoryCache,
 	SSRMultipartLink,
 } from "@apollo/experimental-nextjs-app-support";
-import { getUrl } from "../graphql/get-url";
+import { getUrl } from "@/lib/utils";
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 
 if (process.env.NODE_ENV === "development") {

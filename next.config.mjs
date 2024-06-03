@@ -9,6 +9,9 @@ const nextConfig = {
 	images: {
 		domains: ["localhost", "static-zip.imgix.net", "images.ctfassets.net"],
 	},
+	logging: {
+		fetches: { fullUrl: true },
+	},
 };
 
 export default nextConfig;
