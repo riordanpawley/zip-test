@@ -1,8 +1,8 @@
-import { gql } from "../graphql/bin/gql";
+import { gql } from "@/graphql/bin/gql";
 
-export const getShopFeedDocument = gql(`
-  query getShopFeed {
-    getShopFeed {
+export const searchShopFeedDocument = gql(`
+  query searchShopFeed($query: String) {
+    searchShopFeed(query: $query) {
       categories {
 				name
 				merchants {
@@ -10,6 +10,7 @@ export const getShopFeedDocument = gql(`
 					title
 					image
 					href
+				  logo
 				}
 			}
     }

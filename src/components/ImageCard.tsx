@@ -25,7 +25,7 @@ export function ImageCard({
 }: ImageCardProps) {
 	return (
 		<div className={cn("space-y-3", className)} {...props}>
-			<div className="overflow-hidden rounded-md">
+			<div className="overflow-hidden rounded-md relative">
 				<Image
 					src={src}
 					alt={alt}

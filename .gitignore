@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .direnv
-graphql/bin
-!graphql/bin/.gitkeep
+/graphql/bin
+!/graphql/bin/.gitkeep

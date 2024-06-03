@@ -1,11 +1,10 @@
 import { Effect, Layer, Runtime, Scope } from "effect";
 import { ShopFeedRepoLive } from "../ShopFeedRepo";
-import { OtelNodeSdkLive } from "../OtelNodeSdk";
+import { makeOtelLayer } from "../OtelNodeSdk";
 
 const scope = Effect.runSync(Scope.make());
 
-const layer = Layer.mergeAll(ShopFeedRepoLive, OtelNodeSdkLive);
-Layer.mergeAll(ShopFeedRepoLive, OtelNodeSdkLive);
+const layer = Layer.provideMerge(ShopFeedRepoLive, makeOtelLayer("next.js"));
 
 const runtime = Effect.runSync(
 	Layer.toRuntime(layer).pipe(Scope.extend(scope)),

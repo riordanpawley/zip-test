@@ -10,6 +10,7 @@ import {
 } from "@apollo/experimental-nextjs-app-support";
 import { getUrl } from "@/lib/utils";
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+import { SearchProvider } from "@/use-search";
 
 if (process.env.NODE_ENV === "development") {
 	loadDevMessages();
@@ -52,7 +53,7 @@ function makeClient() {
 export function ApolloWrapper({ children }: React.PropsWithChildren) {
 	return (
 		<ApolloNextAppProvider makeClient={makeClient}>
-			{children}
+			<SearchProvider>{children}</SearchProvider>
 		</ApolloNextAppProvider>
 	);
 }

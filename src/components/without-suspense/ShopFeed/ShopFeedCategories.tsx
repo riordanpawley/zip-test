@@ -1,9 +1,9 @@
 "use client";
 
 import { ScrollArea, ScrollBar } from "@/components/shadcn/scroll-area";
-import { MerchantCard } from "../MerchantCard";
+import { MerchantCard } from "../../MerchantCard";
 import type { Merchant } from "@/graphql/bin/graphql";
-import { useShopFeed } from "@/components/Search/use-search";
+import { useShopFeedWithoutSuspense } from "@/use-search";
 
 const filterValidMerchants = (
 	merchant: NonNullable<Merchant>,
@@ -11,8 +11,10 @@ const filterValidMerchants = (
 	merchant.image !== null && merchant.href !== null;
 
 export const ShopFeedCategories = () => {
-	const categories = useShopFeed();
+	const categories = useShopFeedWithoutSuspense();
 
+	if (!categories) return <div className="p-2">Loading...</div>;
+	if (!categories.length) return <div className="p-2">No Results</div>;
 	return categories.map((category) => (
 		<div key={category.name} className="flex flex-col">
 			<h4 id={category.name} className="px-2 text-2xl">

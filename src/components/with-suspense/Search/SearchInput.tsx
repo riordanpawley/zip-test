@@ -1,16 +1,17 @@
 "use client";
 
 import { Input } from "@/components/shadcn/input";
-import { useSearch } from "./use-search";
+import { SearchContext } from "@/use-search";
+import { useContext } from "react";
 
 export const SearchInput = () => {
-	const { valueInState, setValue } = useSearch();
+	const { search: value, setSearch: setValue } = useContext(SearchContext);
 	return (
 		<Input
 			type="text"
 			className="w-full"
 			placeholder="Search"
-			value={valueInState}
+			value={value}
 			onChange={(e) => setValue(e.target.value)}
 		/>
 	);

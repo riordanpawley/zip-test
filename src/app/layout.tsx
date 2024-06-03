@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./providers";
+import { Button } from "@/components/shadcn/button";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,7 +26,14 @@ export default function RootLayout({
 					inter.variable,
 				)}
 			>
-				<Providers>{children}</Providers>
+				<Providers>
+					<div className="md:mx-auto md:max-w-6xl w-screen py-2 px-8">
+						<Button asChild>
+							<Link href="/">Home</Link>
+						</Button>
+					</div>
+					{children}
+				</Providers>
 			</body>
 		</html>
 	);
