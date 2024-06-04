@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "effectful-tech.effect-vscode",
+    "eamodio.gitlens",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss",
+    "vitest.explorer"
+  ]
+}

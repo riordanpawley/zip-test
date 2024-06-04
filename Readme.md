@@ -17,3 +17,6 @@
 3. install deps
 4. run `bun dev` or `bun run build && bun run start` to start the server
 5. open the browser to `localhost:3000`
+
+## Testing
+I've added a few tests to the project. You can run unit tests with `bun run test` and e2e tests with `bun playwright --ui`.

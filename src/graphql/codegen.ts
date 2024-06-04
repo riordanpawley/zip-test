@@ -2,23 +2,23 @@ import type { CodegenConfig } from "@graphql-codegen/cli";
 import { typeDefs } from "./schema";
 
 const config: CodegenConfig = {
-	schema: typeDefs,
-	documents: ["src/**/*.ts*", "!src/graphql/bin/**"],
-	ignoreNoDocuments: true,
-	overwrite: true,
-	generates: {
-		"./src/graphql/bin/": {
-			preset: "client",
-			presetConfig: {
-				gqlTagName: "gql",
-			},
-			plugins: ["typescript-resolvers"],
-			config: {
-				useIndexSignature: true,
-				contextType: "./src/graphql/ApolloServer#Context",
-			},
-		},
-	},
+  schema: typeDefs,
+  documents: ["src/**/*.ts*", "!src/graphql/bin/**"],
+  ignoreNoDocuments: true,
+  overwrite: true,
+  generates: {
+    "./src/graphql/bin/": {
+      preset: "client",
+      presetConfig: {
+        gqlTagName: "gql",
+      },
+      plugins: ["typescript-resolvers"],
+      config: {
+        useIndexSignature: true,
+        contextType: "./src/graphql/ApolloResolvers#Context",
+      },
+    },
+  },
 };
 // const config: CodegenConfig = {
 //   overwrite: true,
